@@ -1,0 +1,9 @@
+*/*
+!*/debian/
+*/debian/*
+!*/debian/*.install
+!*/debian/*.dirs
+!*/debian/changelog
+!*/debian/rules
+!*/debian/compat
+!*/debian/control

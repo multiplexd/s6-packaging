@@ -1,0 +1,27 @@
+Source: skalibs
+Section: libs
+Priority: optional
+Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.2
+
+Package: skalibs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Public domain general-purpose libraries
+ skalibs is a set of general-purpose, low-level C libraries, all in the
+ public domain.  It can replace or hide the standard C library to some
+ extent, and is designed to allow building of small, static binaries.
+ .
+ See http://skarnet.org/software/skalibs/index.html for more information.
+
+Package: skalibs-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, skalibs (= ${binary:Version})
+Description: Public domain general-purpose libraries
+ skalibs is a set of general-purpose, low-level C libraries, all in the
+ public domain.  It can replace or hide the standard C library to some
+ extent, and is designed to allow building of small, static binaries.
+ .
+ See http://skarnet.org/software/skalibs/index.html for more information.
