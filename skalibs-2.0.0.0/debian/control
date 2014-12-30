@@ -18,6 +18,7 @@ Description: Public domain general-purpose libraries
 Package: skalibs-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: ${misc:Depends}, skalibs (= ${binary:Version})
 Description: Public domain general-purpose libraries
  skalibs is a set of general-purpose, low-level C libraries, all in the

@@ -1,6 +1,23 @@
 #!/usr/bin/make -f
 
+autogen-files := debian/skalibs-dev.dirs debian/skalibs-dev.install
+
 %:
+	dh $@
+
+debian/%: debian/%.in
+	sed -e 's/$${DEB_HOST_MULTIARCH}/$(DEB_HOST_MULTIARCH)/g' $< > $@
+
+clean:
+	rm -f $(autogen-files)
+	dh_clean
+
+binary: binary-arch binary-indep
+
+binary-arch: $(autogen-files) build install
+	dh $@
+
+binary-indep: $(autogen-files) build install
 	dh $@
 
 override_dh_auto_configure:
