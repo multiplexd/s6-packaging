@@ -1,13 +1,13 @@
 Index: skalibs-2.0.0.0/Makefile
 ===================================================================
---- skalibs-2.0.0.0.orig/Makefile	2014-12-31 01:28:41.000000000 +0100
-+++ skalibs-2.0.0.0/Makefile	2014-12-31 01:51:50.663193311 +0100
+--- skalibs-2.0.0.0.orig/Makefile	2014-12-16 00:29:35.000000000 +0100
++++ skalibs-2.0.0.0/Makefile	2014-12-31 15:11:38.995582001 +0100
 @@ -117,7 +117,7 @@
  	exec $(RANLIB) $@
  
  libskarnet.so: $(ALL_DOBJS)
--	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -lrt -Wl,-soname,$@.$(version_l) $^
-+	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -lrt -Wl,-soname,$@.$(version_l) $^ $(RT_LIB)
+-	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -Wl,-soname,$@.$(version_l) $^
++	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -Wl,-soname,$@.$(version_l) $^ $(RT_LIB)
  
  .PHONY: it all clean distclean tgz strip install install-data install-sysdeps install-dynlib install-lib install-include
  
