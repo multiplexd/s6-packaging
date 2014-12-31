@@ -1,0 +1,5 @@
+s6 (2.0.0.0-1) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- Torbjörn Norinder <torbjorn@genunix.se>  Fri, 26 Dec 2014 02:18:34 +0100

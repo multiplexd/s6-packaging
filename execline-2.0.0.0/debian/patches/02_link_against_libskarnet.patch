@@ -1,0 +1,13 @@
+Index: execline-2.0.0.0/Makefile
+===================================================================
+--- execline-2.0.0.0.orig/Makefile	2014-12-31 02:24:59.119209417 +0100
++++ execline-2.0.0.0/Makefile	2014-12-31 02:27:13.399210505 +0100
+@@ -115,7 +115,7 @@
+ 	exec $(RANLIB) $@
+ 
+ lib%.so:
+-	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -Wl,-soname,$@.$(version_l) $^
++	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(CFLAGS_SHARED) $(LDFLAGS_ALL) $(LDFLAGS_SHARED) -Wl,-soname,$@.$(version_l) $^ -lskarnet
+ 
+ .PHONY: it all clean distclean tgz strip install install-dynlib install-bin install-sbin install-lib install-include
+ 

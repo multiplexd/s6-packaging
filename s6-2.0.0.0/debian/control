@@ -1,12 +1,12 @@
-Source: execline
-Section: interpreters
+Source: s6
+Section: admin
 Priority: optional
 Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
 Build-Depends: debhelper (>= 9), skalibs-dev (>= 2.0.0.0), quilt
 Standards-Version: 3.9.2
 
-Package: execline
+Package: s6
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Interpreter for the execline language
+Description: 
  execline is a scripting language for systems automation.

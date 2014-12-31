@@ -2,4 +2,3 @@ usr/lib
 usr/lib/skalibs
 usr/include
 usr/include/skalibs
-usr/lib/${DEB_HOST_MULTIARCH}

@@ -2,14 +2,12 @@
 !*/debian/
 */debian/*
 !*/debian/*.install*
-skalibs*/debian/skalibs-dev.install
 !*/debian/*.dirs*
-skalibs*/debian/skalibs-dev.dirs
 !*/debian/changelog
 !*/debian/rules
 !*/debian/compat
 !*/debian/control
-!*/debian/execlineb
+!*/debian/execlineb.in
 !*/debian/patches/
 *.tar*
 *.dsc*

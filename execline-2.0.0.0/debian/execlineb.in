@@ -1,0 +1,4 @@
+#!@PREFIX@/bin/execlineb -S0
+@PREFIX@/bin/import PATH
+@PREFIX@/bin/export PATH @PREFIX@/bin:${PATH}
+@PREFIX@/bin/exec -a $0 @PREFIX@/bin/execlineb $@
