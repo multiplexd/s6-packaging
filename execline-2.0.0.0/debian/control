@@ -10,3 +10,11 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Interpreter for the execline language
  execline is a scripting language for systems automation.
+
+Package: execline-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, execline (= ${binary:Version})
+Description: Interpreter for the execline language
+ execline is a scripting language for systems automation.
