@@ -1,0 +1,12 @@
+Source: execline
+Section: interpreters
+Priority: optional
+Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
+Build-Depends: debhelper (>= 9), skalibs-dev (>= 2.0.0.0)
+Standards-Version: 3.9.2
+
+Package: execline
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Interpreter for the execline language
+ execline is a scripting language for systems automation.
