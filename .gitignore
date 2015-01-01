@@ -12,6 +12,7 @@
 */debian/s6.dirs
 !*/debian/patches/
 !*/debian/source/
+!*/debian/copyright
 *.tar*
 *.dsc*
 *.deb
