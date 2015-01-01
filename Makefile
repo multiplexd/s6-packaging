@@ -14,7 +14,7 @@ skalibs_debs = $(addsuffix _$(skalibs_version)-$(skalibs_revision)_$(ARCH).deb,s
 execline_debs = execline_$(execline_version)-$(execline_revision)_$(ARCH).deb
 s6_debs = s6_$(s6_version)-$(s6_revision)_$(ARCH).deb
 
-all: skalibs execline s6
+all: clean skalibs execline s6
 
 skalibs: $(skalibs_debs)
 
@@ -22,18 +22,30 @@ execline: $(execline_debs)
 
 s6: $(s6_debs)
 
+clean: 
+	git clean -fdx
+
 $(skalibs_debs): skalibs_$(skalibs_version).orig.tar.gz
+	tar xzf skalibs_$(skalibs_version).orig.tar.gz
 	cd skalibs-$(skalibs_version) && \
 		debuild -uc -us
 
 skalibs_$(skalibs_version).orig.tar.gz:
 	wget -O$@ http://skarnet.org/software/skalibs/skalibs-$(skalibs_version).tar.gz
 
-$(execline_debs):
+$(execline_debs): execline_$(execline_version).orig.tar.gz
+	tar xzf execline_$(execline_version).orig.tar.gz
 	cd execline-$(execline_version) && \
 		debuild -uc -us
 
-$(s6_debs):
+execline_$(execline_version).orig.tar.gz:
+	wget -O$@ http://skarnet.org/software/execline/execline-$(execline_version).tar.gz
+
+s6_$(s6_version).orig.tar.gz:
+	wget -O$@ http://skarnet.org/software/s6/s6-$(s6_version).tar.gz
+
+$(s6_debs): s6_$(s6_version).orig.tar.gz
+	tar xzf s6_$(s6_version).orig.tar.gz
 	cd s6-$(s6_version) && \
 		debuild -uc -us
 
