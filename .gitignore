@@ -8,7 +8,10 @@
 !*/debian/compat
 !*/debian/control
 !*/debian/execlineb.in
+*/debian/s6.install
+*/debian/s6.dirs
 !*/debian/patches/
+!*/debian/source/
 *.tar*
 *.dsc*
 *.deb
