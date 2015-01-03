@@ -14,8 +14,6 @@ skalibs_debs = $(addsuffix _$(skalibs_version)-$(skalibs_revision)_$(ARCH).deb,s
 execline_debs = execline_$(execline_version)-$(execline_revision)_$(ARCH).deb
 s6_debs = s6_$(s6_version)-$(s6_revision)_$(ARCH).deb
 
-all: clean skalibs execline s6
-
 skalibs: $(skalibs_debs)
 
 execline: $(execline_debs)
