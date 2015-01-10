@@ -1,3 +1,9 @@
+s6 (2.0.1.0-1) precise; urgency=low
+
+  * Upgrade to 2.0.1.0
+
+ -- Torbjörn Norinder <torbjorn@genunix.se>  Sat, 10 Jan 2015 19:12:44 +0100
+
 s6 (2.0.0.0-1) UNRELEASED; urgency=low
 
   * Initial release.

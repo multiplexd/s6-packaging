@@ -1,3 +1,9 @@
+execline (2.0.1.0-1) precise; urgency=low
+
+  * Upgrade to 2.0.1.0.
+
+ -- Torbjörn Norinder <torbjorn@nexus>  Sat, 10 Jan 2015 18:57:21 +0100
+
 execline (2.0.0.0-1) UNRELEASED; urgency=low
 
   * Initial release.
