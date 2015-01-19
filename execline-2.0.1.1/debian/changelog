@@ -1,0 +1,17 @@
+execline (2.0.1.1-1) precise; urgency=low
+
+  * Update to 2.0.1.1.
+
+ -- Torbjörn Norinder <torbjorn@genunix.se>  Mon, 19 Jan 2015 17:33:22 +0100
+
+execline (2.0.1.0-1) precise; urgency=low
+
+  * Upgrade to 2.0.1.0.
+
+ -- Torbjörn Norinder <torbjorn@genunix.se>  Sat, 10 Jan 2015 18:57:21 +0100
+
+execline (2.0.0.0-1) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- Torbjörn Norinder <torbjorn@genunix.se>  Fri, 26 Dec 2014 02:18:34 +0100
