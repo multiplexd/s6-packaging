@@ -1,8 +1,14 @@
-Index: s6-2.0.0.0/Makefile
-===================================================================
---- s6-2.0.0.0.orig/Makefile	2014-12-31 02:56:33.895224764 +0100
-+++ s6-2.0.0.0/Makefile	2014-12-31 02:57:00.623224981 +0100
-@@ -114,7 +114,7 @@
+--- a/Makefile
++++ b/Makefile
+@@ -112,14 +112,14 @@
+ 	exec $(REALCC) $(CPPFLAGS_ALL) $(CFLAGS_ALL) $(CFLAGS_SHARED) -c -o $@ $<
+ 
+ $(ALL_BINS):
+-	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(LDFLAGS_ALL) $(LDFLAGS_NOSHARED) $^ $(EXTRA_LIBS) $(LDLIBS_ALL)
++	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(LDFLAGS_ALL) $(LDFLAGS_NOSHARED) $^ $(EXTRA_LIBS) $(LDLIBS_ALL) -lskarnet
+ 
+ lib%.a:
+ 	exec $(AR) rc $@ $^
  	exec $(RANLIB) $@
  
  lib%.so:
