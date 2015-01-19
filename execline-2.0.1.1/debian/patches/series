@@ -1,2 +1,2 @@
-01_deps_mak_multitarget.diff
+01_deps_mak_targets.patch
 02_link_against_libskarnet.patch

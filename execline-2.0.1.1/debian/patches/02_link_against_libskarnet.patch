@@ -1,8 +1,14 @@
-Index: execline-2.0.0.0/Makefile
-===================================================================
---- execline-2.0.0.0.orig/Makefile	2014-12-31 02:24:59.119209417 +0100
-+++ execline-2.0.0.0/Makefile	2014-12-31 02:27:13.399210505 +0100
-@@ -115,7 +115,7 @@
+--- a/Makefile
++++ b/Makefile
+@@ -112,14 +112,14 @@
+ 	exec $(REALCC) $(CPPFLAGS_ALL) $(CFLAGS_ALL) $(CFLAGS_SHARED) -c -o $@ $<
+ 
+ $(ALL_BINS):
+-	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(LDFLAGS_ALL) $(LDFLAGS_NOSHARED) $^ $(EXTRA_LIBS) $(LDLIBS_ALL)
++	exec $(REALCC) -o $@ $(CFLAGS_ALL) $(LDFLAGS_ALL) $(LDFLAGS_NOSHARED) $^ $(EXTRA_LIBS) $(LDLIBS_ALL) -lskarnet
+ 
+ lib%.a:
+ 	exec $(AR) rc $@ $^
  	exec $(RANLIB) $@
  
  lib%.so:
