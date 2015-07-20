@@ -49,13 +49,26 @@ s6_$(s6_version).orig.tar.gz:
 
 install: skalibs-install execline-install s6-install
 
-skalibs-install: $(skalibs_debs)
+skalibs-install: skalibs
 	dpkg -i $(skalibs_debs)
-execline-install: $(execline_debs)
+execline-install: execline
 	dpkg -i $(execline_debs)
-s6-install: $(s6_debs)
+s6-install: s6
 	dpkg -i $(s6_debs)
 
 dockerbuild:
-	docker build -t s6-packaging .
-	docker run -v $(PWD):/opt/s6-packaging -t s6-packaging make -C /opt/s6-packaging install
+	docker build -t $(USER):s6-packaging .
+	docker run \
+	    -e USER_ID=$(shell id -u) -e GROUP_ID=$(shell id -g) \
+	    -v $(PWD):/opt/s6-packaging \
+	    -ti $(USER):s6-packaging \
+	    bash -l
+
+dockerbuild-inner:
+	useradd -u $(USER_ID) -g $(GROUP_ID) --groups sudo -d /opt/s6-packaging s6-user
+	sudo -u s6-user make skalibs
+	make skalibs-install
+	sudo -u s6-user make execline
+	make execline-install
+	sudo -u s6-user make s6
+	make s6-install

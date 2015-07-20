@@ -1,3 +1,2 @@
-usr/lib/libs6*.so.*
-usr/bin/s6*
-usr/lib/@DEB_HOST_MULTIARCH@/s6*
+/usr/lib/libs6*.so.*
+/usr/bin/s6*

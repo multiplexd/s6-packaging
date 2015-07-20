@@ -8,4 +8,5 @@ RUN apt-get update \
         quilt \
         fakeroot \
         wget \
+        sudo \
     && apt-get clean

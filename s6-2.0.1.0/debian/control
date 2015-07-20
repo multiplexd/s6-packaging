@@ -8,11 +8,13 @@ Standards-Version: 3.9.2
 Package: s6
 Architecture: any
 Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: A process supervision suite.
 
 Package: s6-dev
 Section: libdevel
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, s6 (= ${binary:Version})
 Description: A process supervision suite.
