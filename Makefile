@@ -10,8 +10,8 @@ s6_revision := $(REVISION)
 execline_revision := $(REVISION)
 
 skalibs_debs = $(addsuffix _$(skalibs_version)-$(skalibs_revision)_$(ARCH).deb,skalibs skalibs-dev)
-execline_debs = execline_$(execline_version)-$(execline_revision)_$(ARCH).deb
-s6_debs = s6_$(s6_version)-$(s6_revision)_$(ARCH).deb
+execline_debs = $(addsuffix _$(execline_version)-$(execline_revision)_$(ARCH).deb,execline execline-dev)
+s6_debs = $(addsuffix _$(s6_version)-$(s6_revision)_$(ARCH).deb,s6 s6-dev)
 
 skalibs: $(skalibs_debs)
 
@@ -38,11 +38,24 @@ $(execline_debs): execline_$(execline_version).orig.tar.gz
 execline_$(execline_version).orig.tar.gz:
 	wget -O$@ http://skarnet.org/software/execline/execline-$(execline_version).tar.gz
 
-s6_$(s6_version).orig.tar.gz:
-	wget -O$@ http://skarnet.org/software/s6/s6-$(s6_version).tar.gz
-
 $(s6_debs): s6_$(s6_version).orig.tar.gz
 	tar xzf s6_$(s6_version).orig.tar.gz
 	cd s6-$(s6_version) && \
 		debuild -uc -us
 
+s6_$(s6_version).orig.tar.gz:
+	wget -O$@ http://skarnet.org/software/s6/s6-$(s6_version).tar.gz
+
+
+install: skalibs-install execline-install s6-install
+
+skalibs-install: $(skalibs_debs)
+	dpkg -i $(skalibs_debs)
+execline-install: $(execline_debs)
+	dpkg -i $(execline_debs)
+s6-install: $(s6_debs)
+	dpkg -i $(s6_debs)
+
+dockerbuild:
+	docker build -t s6-packaging .
+	docker run -v $(PWD):/opt/s6-packaging -t s6-packaging make -C /opt/s6-packaging install
