@@ -1,2 +1,2 @@
-usr/lib/libskarnet*.so.*
+usr/lib/*.so.* usr/lib/*/*.so.*
 etc/leapsecs.dat

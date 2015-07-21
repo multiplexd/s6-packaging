@@ -1,4 +1,4 @@
-FROM docker-dev.yelpcorp.com/lucid_yelp
+FROM debian
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
@@ -8,8 +8,7 @@ RUN apt-get update \
         quilt \
         fakeroot \
         wget \
-        sudo \
     && apt-get clean
 
-
+ENV DEB_BUILD_OPTIONS=parallel=20
 WORKDIR /opt/s6-packaging

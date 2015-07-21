@@ -1,3 +1,3 @@
-usr/lib/libskarnet*.so
+usr/lib/*.so usr/lib/*/*.so
 usr/include/skalibs/*
-usr/lib/skalibs/*
+usr/lib/skalibs/* usr/lib/*/skalibs/*
