@@ -7,6 +7,7 @@ Standards-Version: 3.9.2
 
 Package: skalibs
 Architecture: any
+Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Public domain general-purpose libraries
