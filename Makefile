@@ -62,13 +62,13 @@ dockerbuild:
 	    -e USER_ID=$(shell id -u) -e GROUP_ID=$(shell id -g) \
 	    -v $(PWD):/opt/s6-packaging \
 	    -ti $(USER):s6-packaging \
-	    bash -l
+	    make dockerbuild-inner
 
 dockerbuild-inner:
-	useradd -u $(USER_ID) -g $(GROUP_ID) --groups sudo -d /opt/s6-packaging s6-user
-	sudo -u s6-user make skalibs
+	useradd -u $(USER_ID) -g $(GROUP_ID) -d /opt/s6-packaging s6-user
+	su s6-user -c 'make skalibs'
 	make skalibs-install
-	sudo -u s6-user make execline
+	su s6-user -c 'make execline'
 	make execline-install
-	sudo -u s6-user make s6
+	su s6-user -c 'make s6'
 	make s6-install

@@ -1,4 +1,4 @@
-FROM debian
+FROM docker-dev.yelpcorp.com/lucid_yelp
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
@@ -10,3 +10,6 @@ RUN apt-get update \
         wget \
         sudo \
     && apt-get clean
+
+
+WORKDIR /opt/s6-packaging
