@@ -1,25 +1,28 @@
 #!/usr/bin/make -f
 
-PREFIX := /usr/lib/execline
+PREFIX := /usr/lib/$(DEB_HOST_MULTIARCH)/execline
 
 %:
-	dh $@
+	dh $@ --parallel --autodest
 
 clean:
 	rm -f debian/execlineb
 	dh $@
 
-binary-arch: debian/execlineb
-	install -D -m 0755 debian/execlineb debian/execline/usr/bin/execlineb
-	dh $@
+override_dh_auto_install: debian/execlineb
+	install -D -m 0755 debian/execlineb debian/tmp/usr/bin/execlineb
+	dh_auto_install
 
 debian/execlineb: debian/execlineb.in
 	sed -e 's"@PREFIX@"$(PREFIX)"g' $< > $@
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
+		--dynlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package} \
+		--sysdepdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package}/sysdeps \
 		--exec-prefix=$(PREFIX) \
-		--with-sysdeps=/usr/lib/skalibs/sysdeps \
+		--with-sysdeps=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/skalibs/sysdeps \
 		--enable-shared \
 		--disable-static \
 		--disable-allstatic

@@ -1,2 +1,2 @@
-usr/lib/libexecline*.so
+usr/lib/*.so usr/lib/*/*.so
 usr/include/execline/*

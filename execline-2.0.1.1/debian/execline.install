@@ -1,2 +1,3 @@
-usr/lib/libexecline*.so.*
-usr/lib/execline/*
+usr/bin/execlineb
+usr/lib/*.so.* usr/lib/*/*.so.*
+usr/lib/execline/* usr/lib/*/execline/*
