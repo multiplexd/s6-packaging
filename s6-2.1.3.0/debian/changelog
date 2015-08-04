@@ -1,3 +1,9 @@
+s6 (2.1.3.0-1) precise; urgency=low
+
+  * Upgrade to 2.1.3.0
+
+ -- Marek Skrobacki <skrobul@skrobul.com>  Thu, 02 Apr 2015 20:29:02 +0100
+
 s6 (2.0.1.0-1) precise; urgency=low
 
   * Upgrade to 2.0.1.0
