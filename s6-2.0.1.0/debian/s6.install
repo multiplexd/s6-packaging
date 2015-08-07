@@ -1,2 +1,2 @@
-/usr/lib/libs6*.so.*
-/usr/bin/s6*
+usr/bin/*
+usr/lib/*.so.* usr/lib/*/*.so.*

@@ -1,2 +1,3 @@
-usr/lib/libs6*.so
-usr/include/s6
+usr/lib/*.so usr/lib/*/*.so
+usr/lib/*.a usr/lib/*/*.a
+usr/include/*

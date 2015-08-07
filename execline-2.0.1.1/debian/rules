@@ -19,10 +19,9 @@ debian/execlineb: debian/execlineb.in
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		--dynlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package} \
+		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 		--sysdepdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package}/sysdeps \
 		--exec-prefix=$(PREFIX) \
 		--with-sysdeps=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/skalibs/sysdeps \
 		--enable-shared \
-		--disable-static \
 		--disable-allstatic

@@ -8,6 +8,8 @@ RUN apt-get update \
         quilt \
         fakeroot \
         wget \
+        lsb-release \
+        vim-tiny \
     && apt-get clean
 
 ENV DEB_BUILD_OPTIONS=parallel=20

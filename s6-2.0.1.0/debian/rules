@@ -1,23 +1,12 @@
 #!/usr/bin/make -f
 
-autogen-files := debian/s6.install debian/s6.dirs
-
-build install:
-	dh $@
-
-clean:
-	rm -f $(autogen-files)
-	dh $@
-
-binary: $(autogen-files) build install
-	dh $@
-
-debian/%: debian/%.in
-	sed -e 's/@DEB_HOST_MULTIARCH@/$(DEB_HOST_MULTIARCH)/g' $< > $@
+%:
+	dh $@ --parallel --autodest
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		--with-sysdeps=/usr/lib/skalibs/sysdeps \
+		--dynlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+		--with-sysdeps=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/skalibs/sysdeps \
 		--enable-shared \
-		--disable-static \
 		--disable-allstatic

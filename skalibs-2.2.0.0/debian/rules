@@ -6,8 +6,7 @@
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		--dynlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package} \
+		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 		--sysdepdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/\$${package}/sysdeps \
 		--enable-force-devr \
-		--disable-static \
 		--datadir=/etc
