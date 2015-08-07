@@ -1,0 +1,8 @@
+!*
+files
+*.log
+*.substvars
+*.debhelper
+tmp
+skalibs
+skalibs-dev
