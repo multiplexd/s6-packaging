@@ -1,3 +1,9 @@
+skalibs (2.3.6.0-1) UNRELEASED; urgency=low
+
+  * Update to 2.3.6.0.
+
+ -- Buck Evan <buck.2019@gmail>  Fri, 07 Aug 2015 14:04:08 -0700
+
 skalibs (2.2.0.0-1) precise; urgency=low
 
   * Update to 2.2.0.0.
