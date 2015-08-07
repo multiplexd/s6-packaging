@@ -22,35 +22,12 @@ s6: $(s6_debs)
 clean: 
 	git clean -fdx
 
-$(skalibs_debs): skalibs_$(skalibs_version).orig.tar.gz
-	cd skalibs && \
-		tar xzf ../skalibs_$(skalibs_version).orig.tar.gz --strip-components=1 && \
-		rm -rf .pc && \
-		debuild -uc -us
-	echo $(skalibs_debs) | xargs -n1 | xargs --replace sh -c 'dpkg -I {}; dpkg -c {}'
-
-skalibs_$(skalibs_version).orig.tar.gz:
-	wget -O$@ http://skarnet.org/software/skalibs/skalibs-$(skalibs_version).tar.gz
-
-$(execline_debs): execline_$(execline_version).orig.tar.gz
-	cd execline && \
-		tar xzf ../execline_$(execline_version).orig.tar.gz --strip-components=1 && \
-		rm -rf .pc && \
-		debuild -uc -us
-	echo $(execline_debs) | xargs -n1 | xargs --replace sh -c 'dpkg -I {}; dpkg -c {}'
-
-execline_$(execline_version).orig.tar.gz:
-	wget -O$@ http://skarnet.org/software/execline/execline-$(execline_version).tar.gz
-
-$(s6_debs): s6_$(s6_version).orig.tar.gz
-	cd s6 && \
-		tar xzf ../s6_$(s6_version).orig.tar.gz --strip-components=1 && \
-		rm -rf .pc && \
-		debuild -uc -us
-	echo $(s6_debs) | xargs -n1 | xargs --replace sh -c 'dpkg -I {}; dpkg -c {}'
-
-s6_$(s6_version).orig.tar.gz:
-	wget -O$@ http://skarnet.org/software/s6/s6-$(s6_version).tar.gz
+$(skalibs_debs):
+	./bin/makedebs skalibs $(skalibs_version) $(skalibs_revision)
+$(execline_debs):
+	./bin/makedebs execline $(execline_version) $(execline_revision)
+$(s6_debs):
+	./bin/makedebs s6 $(s6_version) $(s6_revision)
 
 
 install: skalibs-install execline-install s6-install

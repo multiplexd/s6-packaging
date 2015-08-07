@@ -1,0 +1,21 @@
+#!/bin/bash
+set -eux
+package=$1
+version=$2
+revision=$3
+
+tarball=${package}_${version}.orig.tar.gz
+if ! [ -f $tarball ]; then
+    wget -O$tarball http://skarnet.org/software/$package/$package-$version.tar.gz
+fi
+
+cd $package
+rm -rf .pc
+tar xzf ../$tarball --strip-components=1
+debuild -us -uc
+cd -
+
+for deb in ${package}*_${version}-${revision}_*.deb; do
+    dpkg -I $deb
+    dpkg -c $deb
+done
