@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/skalibs/releases \
+	/skarnet/skalibs/archive/v(.+).tar.gz

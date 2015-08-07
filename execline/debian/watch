@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/execline/releases \
+	/skarnet/execline/archive/v(.+).tar.gz
