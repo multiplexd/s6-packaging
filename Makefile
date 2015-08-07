@@ -56,36 +56,38 @@ s6_$(s6_version).orig.tar.gz:
 install: skalibs-install execline-install s6-install
 
 skalibs-install: skalibs
-	dpkg -i $(skalibs_debs)
+	sudo dpkg -i $(skalibs_debs)
 execline-install: execline
-	dpkg -i $(execline_debs)
+	sudo dpkg -i $(execline_debs)
 s6-install: s6
-	dpkg -i $(s6_debs)
+	sudo dpkg -i $(s6_debs)
 
-DOCKER_TAG?=s6-packaging:$(USER)
-dockerimage:
+
+### dockerization-specific rules ###
+DOCKER_VERSION?=$(USER)/$(s6_version)
+DOCKER_TAG?=s6-packaging:$(DOCKER_VERSION)
+export CMD
+
+docker-debs:
+	make docker-shell CMD='make install'
+docker-shell: docker-image
+	docker run \
+	    -e USER_ID=$(shell id -u) \
+	    -e GROUP_ID=$(shell id -g) \
+	    -e CMD \
+	    -v $(PWD):/opt/s6-packaging \
+	    -ti $(DOCKER_TAG) \
+	    make docker-shell-inner
+docker-shell-inner:
+	groupadd -g $(GROUP_ID) s6-user
+	useradd \
+	    -u $(USER_ID) \
+	    -g $(GROUP_ID) \
+	    -d /opt/s6-packaging \
+	    -s /bin/bash \
+	    s6-user
+	sudo -iu s6-user $(CMD)
+
+docker-image:
 	docker build -t $(DOCKER_TAG) .
 	docker run $(DOCKER_TAG) lsb_release -a
-
-DOCKER=docker run \
-    -e USER_ID=$(shell id -u) -e GROUP_ID=$(shell id -g) \
-    -v $(PWD):/opt/s6-packaging \
-    -ti $(DOCKER_TAG)
-
-dockerbuild: dockerimage
-	$(DOCKER) make dockerbuild-inner
-
-dockerinteractive: dockerimage
-	$(DOCKER) bash -l
-
-s6-user:
-	groupadd -g $(GROUP_ID) s6-user
-	useradd -u $(USER_ID) -g $(GROUP_ID) -d /opt/s6-packaging s6-user
-
-dockerbuild-inner: s6-user
-	su s6-user -c 'make skalibs'
-	make skalibs-install
-	su s6-user -c 'make execline'
-	make execline-install
-	su s6-user -c 'make s6'
-	make s6-install

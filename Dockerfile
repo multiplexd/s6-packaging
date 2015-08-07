@@ -8,9 +8,13 @@ RUN apt-get update \
         quilt \
         fakeroot \
         wget \
+        sudo \
         lsb-release \
         vim-tiny \
     && apt-get clean
+
+# allow anyone to do whatever via sudo
+RUN echo 'ALL ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 ENV DEB_BUILD_OPTIONS=parallel=20
 WORKDIR /opt/s6-packaging
