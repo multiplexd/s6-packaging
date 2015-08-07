@@ -3,3 +3,5 @@
 *.deb
 *.changes
 *.build
+make-4.1/
+.bash_history

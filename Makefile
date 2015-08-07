@@ -65,6 +65,10 @@ docker-shell-inner:
 	    s6-user
 	sudo -iu s6-user $(CMD)
 
-docker-image:
+make-4.1:
+	wget http://ftp.gnu.org/gnu/make/make-4.1.tar.gz
+	tar xvf make-4.1.tar.gz
+
+docker-image: make-4.1
 	docker build -t $(DOCKER_TAG) .
 	docker run $(DOCKER_TAG) lsb_release -a
