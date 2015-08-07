@@ -59,14 +59,15 @@ execline-install: execline
 s6-install: s6
 	dpkg -i $(s6_debs)
 
+DOCKER_TAG?=s6-packaging:$(USER)
 dockerimage:
-	docker build -t $(USER):s6-packaging .
-	docker run $(USER):s6-packaging lsb_release -a
+	docker build -t $(DOCKER_TAG) .
+	docker run $(DOCKER_TAG) lsb_release -a
 
 DOCKER=docker run \
     -e USER_ID=$(shell id -u) -e GROUP_ID=$(shell id -g) \
     -v $(PWD):/opt/s6-packaging \
-    -ti $(USER):s6-packaging
+    -ti $(DOCKER_TAG)
 
 dockerbuild: dockerimage
 	$(DOCKER) make dockerbuild-inner
@@ -75,6 +76,7 @@ dockerinteractive: dockerimage
 	$(DOCKER) bash -l
 
 s6-user:
+	groupadd -g $(GROUP_ID) s6-user
 	useradd -u $(USER_ID) -g $(GROUP_ID) -d /opt/s6-packaging s6-user
 
 dockerbuild-inner: s6-user
