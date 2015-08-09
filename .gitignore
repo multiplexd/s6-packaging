@@ -5,3 +5,10 @@
 *.build
 make-4.1/
 .bash_history
+
+skalibs/*
+!skalibs/debian
+execline/*
+!execline/debian
+s6/*
+!s6/debian
