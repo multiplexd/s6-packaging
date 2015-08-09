@@ -1,12 +1,15 @@
 #!/usr/bin/make -f
 
+lib := \$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+
 %:
 	dh $@ --parallel --autodest
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		--dynlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-		--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-		--with-sysdeps=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)/skalibs/sysdeps \
+		--libdir=$(lib) \
+		--dynlibdir=$(lib) \
+		--with-dynlib=$(lib) \
+		--with-sysdeps=$(lib)/skalibs \
 		--enable-shared \
 		--disable-allstatic

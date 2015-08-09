@@ -7,19 +7,22 @@ RUN apt-get update \
         build-essential \
         quilt \
         fakeroot \
-        wget \
+        # for uscan
+        libwww-perl \
+        # simplifies the makefile
         sudo \
+        # shows me which distro we're building debs for
         lsb-release \
+        # I got tired of installing this myself repeatedly
         vim-tiny \
     && apt-get clean
 
 # building s6 requires a quite new GNU make
 ADD make-4.1 /opt/make
 WORKDIR /opt/make
-RUN ./configure && make -j20 && make install
+RUN ./configure && make -j20
 
 # allow anyone to do whatever via sudo
 RUN echo 'ALL ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-ENV DEB_BUILD_OPTIONS=parallel=20
 WORKDIR /opt/s6-packaging

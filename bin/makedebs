@@ -4,15 +4,14 @@ package=$1
 version=$2
 revision=$3
 
-tarball=${package}_${version}.orig.tar.gz
-if ! [ -f $tarball ]; then
-    wget -O$tarball http://skarnet.org/software/$package/$package-$version.tar.gz
-fi
+ncpu=$(getconf _NPROCESSORS_CONF)
+export DEB_BUILD_OPTIONS=parallel=$((ncpu * 5))
 
 cd $package
 rm -rf .pc
-tar xzf ../$tarball --strip-components=1
-debuild -us -uc
+uscan --verbose --force-download
+tar xzf ../${package}_${version}.orig.tar.gz --strip-components=1
+debuild --prepend-path=/opt/make -us -uc
 cd -
 
 for deb in ${package}*_${version}-${revision}_*.deb; do
