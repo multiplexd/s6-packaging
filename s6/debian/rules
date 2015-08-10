@@ -5,7 +5,7 @@ lib := \$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 %:
 	dh $@ --parallel --autodest
 
-override_dh_auto_configure:
+override_dh_auto_configure: workaround
 	dh_auto_configure -- \
 		--libdir=$(lib) \
 		--dynlibdir=$(lib) \
@@ -13,3 +13,8 @@ override_dh_auto_configure:
 		--with-sysdeps=$(lib)/skalibs \
 		--enable-shared \
 		--disable-allstatic
+
+
+# workaround for older debhelper to parse the above override as non-empty
+.PHONY: workaround
+workaround:

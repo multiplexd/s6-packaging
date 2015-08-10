@@ -17,7 +17,7 @@ override_dh_auto_install: debian/execlineb
 debian/execlineb: debian/execlineb.in
 	sed -e 's"@PREFIX@"$(PREFIX)"g' $< > $@
 
-override_dh_auto_configure:
+override_dh_auto_configure: workaround
 	dh_auto_configure -- \
 		--libdir=$(lib) \
 		--dynlibdir=$(lib) \
@@ -26,3 +26,8 @@ override_dh_auto_configure:
 		--enable-shared \
 		--disable-allstatic \
 		--exec-prefix=$(PREFIX)
+
+
+# workaround for older debhelper to parse the above override as non-empty
+.PHONY: workaround
+workaround:

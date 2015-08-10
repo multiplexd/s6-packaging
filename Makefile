@@ -56,7 +56,7 @@ docker-shell: docker-image
 	    -ti $(DOCKER_TAG) \
 	    make docker-shell-inner
 docker-shell-inner:
-	groupadd -g $(GROUP_ID) s6-user
+	groupadd --force -g $(GROUP_ID) s6-user
 	useradd \
 	    -u $(USER_ID) \
 	    -g $(GROUP_ID) \
