@@ -4,6 +4,12 @@ package=$1
 version=$2
 revision=$3
 
+if [ "$(lsb_release -sc)" == "lucid" ]; then
+    # the openssl in lucid is too old to handle the github certs
+    export PERL_LWP_SSL_VERIFY_HOSTNAME=0
+fi
+
+# pump up the volume; this stuff is pretty IO bound
 ncpu=$(getconf _NPROCESSORS_CONF)
 export DEB_BUILD_OPTIONS=parallel=$((ncpu * 5))
 

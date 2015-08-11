@@ -9,6 +9,7 @@ RUN apt-get update \
         fakeroot \
         # for uscan
         libwww-perl \
+        libcrypt-ssleay-perl \
         # simplifies the makefile
         sudo \
         # shows me which distro we're building debs for
