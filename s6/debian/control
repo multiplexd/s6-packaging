@@ -4,17 +4,32 @@ Priority: optional
 Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
 Build-Depends: debhelper (>= 7), skalibs-dev (>= 2.0.0.0), execline-dev (>= 2.0.0.0), quilt
 Standards-Version: 3.9.2
+Homepage: http://skarnet.org/software/s6/
 
 Package: s6
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: skalibs, ${misc:Depends}, ${shlibs:Depends}
-Description: A process supervision suite.
+Description: skarnet's small supervision suite
+ s6 is a small suite of programs for UNIX, designed to allow process
+ supervision (a.k.a service supervision), in the line of daemontools and runit,
+ as well as various operations on processes and daemons. It is meant to be a
+ toolbox for low-level process and service administration, providing different
+ sets of independent tools that can be used within or without the framework,
+ and that can be assembled together to achieve powerful functionality with a
+ very small amount of code.
 
 Package: s6-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}, s6 (= ${binary:Version})
-Description: A process supervision suite.
+Description: skarnet's small supervision suite
+ s6 is a small suite of programs for UNIX, designed to allow process
+ supervision (a.k.a service supervision), in the line of daemontools and runit,
+ as well as various operations on processes and daemons. It is meant to be a
+ toolbox for low-level process and service administration, providing different
+ sets of independent tools that can be used within or without the framework,
+ and that can be assembled together to achieve powerful functionality with a
+ very small amount of code.

@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
 Build-Depends: debhelper (>= 7), skalibs-dev (>= 2.0.0.0), quilt
 Standards-Version: 3.9.2
+Homepage: http://skarnet.org/software/execline/
 
 Package: execline
 Architecture: any
