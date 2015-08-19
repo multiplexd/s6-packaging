@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eux
+# This is designed to work on circleci.com with a parallelism of 3.
+
+make clean
+case $CIRCLE_NODE_INDEX in
+    # these are the platforms that I care about.
+    0) base=debian:sid ;;
+    1) base=ubuntu:trusty ;;
+    2) base=ubuntu:lucid ;;
+    *) echo unknown CIRCLE_NODE_INDEX: $CIRCLE_NODE_INDEX; exit -1;;
+esac
+
+sed -i "1 s/.*/FROM $base/" Dockerfile
+
+make docker-debs

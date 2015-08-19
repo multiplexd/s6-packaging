@@ -4,4 +4,5 @@ machine:
 
 test:
     override:
-        - make docker-debs
+        - ./CI:
+            parallel: true
