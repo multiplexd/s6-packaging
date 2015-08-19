@@ -15,7 +15,7 @@ export DEB_BUILD_OPTIONS=parallel=$((ncpu * 5))
 
 cd $package
 rm -rf .pc
-uscan --verbose --force-download
+uscan --verbose --force-download --download-current-version
 tar xzf ../${package}_${version}.orig.tar.gz --strip-components=1
 debuild --prepend-path=/opt/make -us -uc
 cd -
