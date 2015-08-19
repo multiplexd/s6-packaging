@@ -14,3 +14,7 @@ esac
 sed -i "1 s/.*/FROM $base/" Dockerfile
 
 make docker-debs
+
+dest=$CIRCLE_ARTIFACTS/$base
+mkdir -p $dest
+cp *.deb $dest
