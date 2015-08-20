@@ -10,7 +10,7 @@ override_dh_auto_configure: workaround
 		--libdir=$(lib) \
 		--dynlibdir=$(lib) \
 		--with-dynlib=$(lib) \
-		--sysdepdir=$(lib)/skalibs \
+		--sysdepdir=$(lib)/skalibs/sysdeps \
 		--enable-shared \
 		--disable-allstatic \
 		--enable-force-devr \

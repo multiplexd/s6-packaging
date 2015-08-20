@@ -22,7 +22,7 @@ override_dh_auto_configure: workaround
 		--libdir=$(lib) \
 		--dynlibdir=$(lib) \
 		--with-dynlib=$(lib) \
-		--with-sysdeps=$(lib)/skalibs \
+		--with-sysdeps=$(lib)/skalibs/sysdeps \
 		--enable-shared \
 		--disable-allstatic \
 		--exec-prefix=$(PREFIX)
