@@ -21,6 +21,8 @@ debuild --prepend-path=/opt/make -us -uc
 cd -
 
 for deb in ${package}*_${version}-${revision}_*.deb; do
-    dpkg -I $deb
-    dpkg -c $deb
+    (
+        dpkg -I $deb
+        dpkg -c $deb
+    ) | tee $deb.info.txt
 done

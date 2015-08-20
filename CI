@@ -17,4 +17,4 @@ make docker-debs
 
 dest=$CIRCLE_ARTIFACTS/$base
 mkdir -p $dest
-cp *.deb $dest
+cp *.{deb,debian.*,dsc,build,changes,info.txt} $dest
