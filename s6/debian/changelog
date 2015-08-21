@@ -1,8 +1,8 @@
 s6 (2.2.0.1-1) UNRELEASED; urgency=low
 
-  * Upgrade to 2.2.0.0
+  * Upgrade to 2.2.0.1
 
- -- Buck Evan <buck@yelp.com>  Wed, 19 Aug 2015 10:48:51 -0700
+ -- Buck Evan <buck.2019@gmail.com>  Wed, 19 Aug 2015 10:48:51 -0700
 
 s6 (2.0.1.0-1) precise; urgency=low
 

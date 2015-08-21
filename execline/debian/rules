@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-PREFIX := /usr/lib/$(DEB_HOST_MULTIARCH)/execline
+PREFIX := $(shell readlink -m /usr/lib/$(DEB_HOST_MULTIARCH)/execline)
 lib := \$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 
 %:

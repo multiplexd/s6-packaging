@@ -2,7 +2,8 @@ Source: skalibs
 Section: libs
 Priority: optional
 Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
-Build-Depends: debhelper (>= 7), quilt
+Uploaders: Buck Evan <buck.2019@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), quilt
 Standards-Version: 3.9.2
 Homepage: http://skarnet.org/software/skalibs/
 

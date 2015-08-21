@@ -1,4 +1,7 @@
-FROM debian
+FROM ubuntu:lucid
+
+## I currently support ubuntu lucid/trusty/vivid and debian jessie/sid.
+## of these, ubuntu lucid is the hardest to support
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
@@ -10,6 +13,12 @@ RUN apt-get update \
         # for uscan
         libwww-perl \
         libcrypt-ssleay-perl \
+        # testing
+        autopkgtest \
+        piuparts \
+        lintian \
+        # for getting our make4 source
+        wget \
         # simplifies the makefile
         sudo \
         # shows me which distro we're building debs for
