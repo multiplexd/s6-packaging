@@ -10,6 +10,7 @@ RUN apt-get update \
         build-essential \
         quilt \
         fakeroot \
+        wget \
         # for uscan
         libwww-perl \
         libcrypt-ssleay-perl \
@@ -28,9 +29,17 @@ RUN apt-get update \
     && apt-get clean
 
 # building s6 requires a quite new GNU make
-ADD make-4.1 /opt/make
-WORKDIR /opt/make
-RUN ./configure && make -j20
+RUN cd /opt \
+    && wget http://ftp.gnu.org/gnu/make/make-4.1.tar.gz -O- | \
+	tar xvz \
+    && cd make-4.1 \
+    && ./configure --prefix /usr \
+    && make -j20 \
+    && make install \
+    && cd / \
+    && rm -rf /opt/make-4.1 \
+    && true
+
 
 # allow anyone to do whatever via sudo
 RUN echo 'ALL ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers

@@ -17,7 +17,7 @@ cd $package
 rm -rf .pc
 uscan --verbose --force-download --download-current-version
 tar xzf ../${package}_${version}.orig.tar.gz --strip-components=1
-debuild --prepend-path=/opt/make -us -uc
+debuild -us -uc
 cd -
 
 for deb in ${package}*_${version}-${revision}_*.deb; do
