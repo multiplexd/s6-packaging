@@ -4,7 +4,7 @@ set -eux
 base="$1"
 dest="$2"
 
-sed -i "1 s/.*/FROM $base/" Dockerfile
+sed -i "1 s|.*|FROM $base|" Dockerfile
 
 make docker-debs
 
