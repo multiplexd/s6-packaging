@@ -29,15 +29,15 @@ RUN apt-get update \
     && apt-get clean
 
 # building s6 requires a quite new GNU make
-RUN cd /opt \
+RUN cd /usr/src \
     && wget http://ftp.gnu.org/gnu/make/make-4.1.tar.gz -O- | \
 	tar xvz \
     && cd make-4.1 \
-    && ./configure --prefix /usr \
+    && ./configure --prefix /opt/make \
     && make -j20 \
     && make install \
     && cd / \
-    && rm -rf /opt/make-4.1 \
+    && rm -rf /usr/src/make-4.1 \
     && true
 
 

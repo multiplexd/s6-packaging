@@ -41,6 +41,7 @@ s6-install: s6
 
 
 ### dockerization-specific rules ###
+DOCKER_INTERACTIVE:=$(shell tty -s && echo -it)
 DOCKER_VERSION?=$(USER)/$(s6_version)
 DOCKER_TAG?=s6-packaging:$(DOCKER_VERSION)
 export CMD
@@ -53,7 +54,8 @@ docker-shell: docker-image
 	    -e GROUP_ID=$(shell id -g) \
 	    -e CMD \
 	    -v $(PWD):/opt/s6-packaging \
-	    -ti $(DOCKER_TAG) \
+	    $(DOCKER_INTERACTIVE) \
+	    $(DOCKER_TAG) \
 	    make docker-shell-inner
 docker-shell-inner:
 	groupadd --force -g $(GROUP_ID) s6-user

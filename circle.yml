@@ -4,5 +4,5 @@ machine:
 
 test:
     override:
-        - ./CI:
+        - ./CI/circle:
             parallel: true
