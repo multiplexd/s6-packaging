@@ -8,7 +8,8 @@ case $CIRCLE_NODE_INDEX in
     # these are the platforms that I care about.
     0) base=debian:sid ;;
     1) base=ubuntu:trusty ;;
-    2) base=ubuntu:lucid ;;
+    2) base=ubuntu:precise ;; # for travis
+    3) base=ubuntu:lucid ;;
     *)
         echo unknown CIRCLE_NODE_INDEX: $CIRCLE_NODE_INDEX
         exit -1
