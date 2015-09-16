@@ -1,6 +1,6 @@
 FROM ubuntu:lucid
 
-## I currently support ubuntu lucid/trusty/vivid and debian jessie/sid.
+## I currently support ubuntu lucid/precise/trusty/vivid and debian jessie/sid.
 ## of these, ubuntu lucid is the hardest to support
 
 RUN apt-get update \
