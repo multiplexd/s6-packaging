@@ -1,3 +1,9 @@
+skalibs (2.3.10.0-1) UNRELEASED; urgency=low
+
+  * Update to 2.3.10.0.
+
+ -- multiplexd <multiplexd@gmx.com>  Thu, 22 Sep 2016 19:18:57 +0100
+
 skalibs (2.3.6.1-1) UNRELEASED; urgency=low
 
   * Update to 2.3.6.1.
