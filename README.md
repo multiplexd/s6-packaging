@@ -3,7 +3,6 @@
 This repository contains infrastructure to package s6 and dependencies
 for Debian.
 
-This is currently _broken_ due to build issues with skalibs.
 
 # Build instructions
 
