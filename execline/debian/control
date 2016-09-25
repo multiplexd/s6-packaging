@@ -1,9 +1,9 @@
 Source: execline
 Section: interpreters
 Priority: optional
-Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
-Uploaders: Buck Evan <buck.2019@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.0.0.0), quilt
+Maintainer: multiplex'd <multiplexd@gmx.com>
+Uploaders: multiplex'd <multiplexd@gmx.com>
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.3.10.0), quilt
 Standards-Version: 3.9.2
 Homepage: http://skarnet.org/software/execline/
 
@@ -11,7 +11,7 @@ Package: execline
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs, ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.3.10.0), ${misc:Depends}, ${shlibs:Depends}
 Description: Interpreter for the execline language
  execline is a scripting language for systems automation.
 

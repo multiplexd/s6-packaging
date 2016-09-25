@@ -1,8 +1,8 @@
 Source: skalibs
 Section: libs
 Priority: optional
-Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
-Uploaders: Buck Evan <buck.2019@gmail.com>
+Maintainer: multiplex'd <multiplexd@gmx.com>
+Uploaders: multiplex'd <multiplexd@gmx.com>
 Build-Depends: debhelper (>= 7.0.50~), quilt
 Standards-Version: 3.9.2
 Homepage: http://skarnet.org/software/skalibs/
