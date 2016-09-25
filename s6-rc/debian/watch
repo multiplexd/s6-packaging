@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/s6-rc/releases \
+	/skarnet/s6-rc/archive/v(.+).tar.gz

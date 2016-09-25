@@ -1,0 +1,5 @@
+s6-rc (0.0.3.0-1) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- multiplex'd <multiplexd@gmx.com>  Sun, 25 Sep 2016 09:18:25 +0100
