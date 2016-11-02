@@ -3,7 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.3.10.0), quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.4.0.0), quilt
 Standards-Version: 3.9.2
 Homepage: http://skarnet.org/software/execline/
 
