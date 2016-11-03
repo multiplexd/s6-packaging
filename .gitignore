@@ -12,3 +12,5 @@ execline/*
 !execline/debian
 s6/*
 !s6/debian
+s6-rc/*
+!s6-rc/debian
