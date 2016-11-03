@@ -8,10 +8,10 @@ software for Debian.
 This is the skarnet software which is currently packaged in this 
 repository:
 
-* skalibs 2.3.10.0
-* execline 2.1.5.0
-* s6 2.3.0.0
-* s6-rc 0.0.3.0
+* skalibs 2.4.0.0
+* execline 2.2.0.0
+* s6 2.4.0.0
+* s6-rc 0.1.0.0
 
 ## Build instructions
 
