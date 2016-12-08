@@ -1,6 +1,12 @@
+skalibs (2.4.0.2-1) UNRELEASED; urgency=low
+
+  * Update to 2.4.0.2
+
+ -- multiplex'd <multiplexd@gmx.com>  Thu, 8 Dec 2016 20:52:43 +0000
+
 skalibs (2.4.0.0-1) UNRELEASED; urgency=low
 
- * Update to 2.4.0.0
+  * Update to 2.4.0.0
 
  -- multiplex'd <multiplexd@gmx.com>  Wed, 2 Nov 2016 19:36:35 +0000
 
