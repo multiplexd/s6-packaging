@@ -13,6 +13,7 @@ repository:
 * s6 2.4.0.0
 * s6-rc 0.1.0.0
 * s6-portable-utils 2.1.0.0
+* s6-linux-utils 2.2.0.0
 
 ## Build instructions
 
