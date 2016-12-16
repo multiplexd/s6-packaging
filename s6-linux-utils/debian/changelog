@@ -1,0 +1,5 @@
+s6-linux-utils (2.2.0.0-1) UNRELEASED; urgency=low
+
+  * Initial release
+
+ -- multiplex'd <multiplexd@gmx.com>  Fri, 16 Dec 2016 21:32:46 +0000
