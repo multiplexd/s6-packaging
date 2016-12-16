@@ -14,3 +14,5 @@ s6/*
 !s6/debian
 s6-rc/*
 !s6-rc/debian
+s6-portable-utils/*
+!s6-portable-utils/debian
