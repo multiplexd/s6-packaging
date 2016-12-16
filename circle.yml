@@ -1,8 +1,0 @@
-machine:
-    services:
-        - docker
-
-test:
-    override:
-        - ./CI/circle:
-            parallel: true
