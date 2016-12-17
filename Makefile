@@ -10,9 +10,9 @@ s6-linux-utils_version := 2.2.0.0
 s6-linux-init_version := 0.2.0.0
 
 skalibs_revision := $(REVISION)
-s6_revision := $(REVISION)
+s6_revision := 2
 execline_revision := $(REVISION)
-s6-rc_revision := $(REVISION)
+s6-rc_revision := 2
 s6-portable-utils_revision := $(REVISION)
 s6-linux-utils_revision := $(REVISION)
 s6-linux-init_revision := $(REVISION)
