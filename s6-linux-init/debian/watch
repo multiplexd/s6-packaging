@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/s6-linux-init/releases \
+	/skarnet/s6-linux-init/archive/v(.+).tar.gz

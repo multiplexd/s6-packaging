@@ -1,0 +1,5 @@
+s6-linux-init (0.2.0.0-1) UNRELEASED; urgency=low
+
+  * Initial release
+
+ -- multiplex'd <multiplexd@gmx.com>  Sat, 17 Dec 2016 09:05:46 +0000
