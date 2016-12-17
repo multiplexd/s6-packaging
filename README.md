@@ -14,6 +14,7 @@ repository:
 * s6-rc 0.1.0.0
 * s6-portable-utils 2.1.0.0
 * s6-linux-utils 2.2.0.0
+* s6-linux-init 0.2.0.0
 
 ## Build instructions
 
@@ -33,4 +34,5 @@ Then install the skalibs and skalibs-dev packages with _dpkg -i_
 All of the skarnet packages depend on skalibs. s6 and s6-rc both require
 execline and s6-rc requires s6. This requires the generated -dev packages to 
 be installed; for example, compiling s6 requires the skalibs, skalibs-dev,
-execline and execline-dev packages.
+execline and execline-dev packages. s6-linux-init requires skalibs, execline,
+s6, s6-portable-utils and s6-linux-utils.
