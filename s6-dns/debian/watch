@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/s6-dns/releases \
+	/skarnet/s6-dns/archive/v(.+).tar.gz
