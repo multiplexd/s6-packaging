@@ -1,0 +1,3 @@
+version=3
+https://github.com/skarnet/s6-networking/releases \
+	/skarnet/s6-networking/archive/v(.+).tar.gz

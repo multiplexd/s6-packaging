@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+lib := \$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+
+%:
+	dh $@ --parallel --autodest
+
+override_dh_auto_configure: workaround
+	dh_auto_configure -- \
+		--libdir=$(lib) \
+		--dynlibdir=$(lib) \
+		--with-dynlib=$(lib) \
+		--with-sysdeps=$(lib)/skalibs/sysdeps \
+		--enable-shared \
+		--disable-allstatic
+
+
+# workaround for older debhelper to parse the above override as non-empty
+.PHONY: workaround
+workaround:

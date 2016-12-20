@@ -9,6 +9,7 @@ s6-portable-utils_version := 2.1.0.0
 s6-linux-utils_version := 2.2.0.0
 s6-linux-init_version := 0.2.0.0
 s6-dns_version := 2.1.0.0
+s6-networking_version := 2.2.1.0
 
 skalibs_revision := $(REVISION)
 s6_revision := 2
@@ -18,6 +19,7 @@ s6-portable-utils_revision := $(REVISION)
 s6-linux-utils_revision := $(REVISION)
 s6-linux-init_revision := $(REVISION)
 s6-dns_revision := $(REVISION)
+s6-networking_revision := $(REVISION)
 
 skalibs_debs = $(addsuffix _$(skalibs_version)-$(skalibs_revision)_$(ARCH).deb,skalibs skalibs-dev)
 execline_debs = $(addsuffix _$(execline_version)-$(execline_revision)_$(ARCH).deb,execline execline-dev)
@@ -27,6 +29,7 @@ s6-portable-utils_debs = $(addsuffix _$(s6-portable-utils_version)-$(s6-portable
 s6-linux-utils_debs = $(addsuffix _$(s6-linux-utils_version)-$(s6-linux-utils_revision)_$(ARCH).deb,s6-linux-utils s6-linux-utils-dev)
 s6-linux-init_debs = $(addsuffix _$(s6-linux-init_version)-$(s6-linux-init_revision)_$(ARCH).deb,s6-linux-init s6-linux-init-dev)
 s6-dns_debs = $(addsuffix _$(s6-dns_version)-$(s6-dns_revision)_$(ARCH).deb,s6-dns s6-dns-dev)
+s6-networking_debs = $(addsuffix _$(s6-networking_version)-$(s6-networking_revision)_$(ARCH).deb,s6-networking s6-networking-dev)
 
 skalibs: $(skalibs_debs)
 execline: $(execline_debs)
@@ -36,6 +39,7 @@ s6-portable-utils: $(s6-portable-utils_debs)
 s6-linux-utils: $(s6-linux-utils_debs)
 s6-linux-init: $(s6-linux-init_debs)
 s6-dns: $(s6-dns_debs)
+s6-networking: $(s6-networking_debs)
 
 clean: 
 	git clean -fdx
@@ -56,9 +60,11 @@ $(s6-linux-init_debs):
 	./bin/makedebs s6-linux-init $(s6-linux-init_version) $(s6-linux-init_revision)
 $(s6-dns_debs):
 	./bin/makedebs s6-dns $(s6-dns_version) $(s6-dns_revision)
+$(s6-networking_debs):
+	./bin/makedebs s6-networking $(s6-networking_version) $(s6-networking_revision)
 
 
-install: skalibs-install execline-install s6-install s6-rc-install s6-portable-utils-install s6-linux-utils-install s6-linux-init-install s6-dns
+install: skalibs-install execline-install s6-install s6-rc-install s6-portable-utils-install s6-linux-utils-install s6-linux-init-install s6-dns-install s6-networking-install
 
 skalibs-install: skalibs
 	sudo dpkg -i $(skalibs_debs)
@@ -76,3 +82,5 @@ s6-linux-init-install: s6-linux-init
 	sudo dpkg -i $(s6-linux-init_debs)
 s6-dns-install: s6-dns
 	sudo dpkg -i $(s6-dns_debs)
+s6-networking-install: s6-networking
+	sudo dpkg -i $(s6-networking_debs)

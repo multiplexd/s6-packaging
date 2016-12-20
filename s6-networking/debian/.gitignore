@@ -1,0 +1,8 @@
+!*
+files
+*.log
+*.substvars
+*.debhelper
+tmp
+s6-networking
+s6-networking-dev
