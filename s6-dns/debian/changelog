@@ -1,5 +1,6 @@
 s6-dns (2.1.0.0-1) UNRELEASED; urgency=low
 
-  * Make sure that the s6-rc-oneshot-run and s6-rc-fdholder-filler programs are added to the s6-rc package
+  * Initial release
 
  -- multiplex'd <multiplexd@gmx.com>  Tue, 20 Dec 2016 11:47:51 +0000
+ 
