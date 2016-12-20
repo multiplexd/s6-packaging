@@ -5,7 +5,7 @@ Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
 Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.4.0.0),quilt
 Standards-Version: 3.9.2
-Homepage: http://skarnet.org/software/s6-rc/
+Homepage: http://skarnet.org/software/s6-linux-utils/
 
 Package: s6-linux-utils
 Architecture: any
