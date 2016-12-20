@@ -4,5 +4,5 @@ files
 *.substvars
 *.debhelper
 tmp
-s6-rc
-s6-rc-dev
+s6-linux-utils
+s6-linux-utils-dev
