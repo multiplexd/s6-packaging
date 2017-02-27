@@ -1,3 +1,9 @@
+s6-rc (0.1.0.0-3) UNRELEASED; urgency=low
+
+  * Change the install file to fix building on more recent Debian versions
+
+ -- multiplex'd <multiplexd@gmx.com>  Mon, 27 Feb 2017 19:49:11 +0000
+
 s6-rc (0.1.0.0-2) UNRELEASED; urgency=low
 
   * Make sure that the s6-rc-oneshot-run and s6-rc-fdholder-filler programs are added to the s6-rc package

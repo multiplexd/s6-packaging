@@ -1,4 +1,4 @@
-usr/lib/*.so usr/lib/*/*.so
-usr/lib/*.a usr/lib/*/*.a
+usr/lib/*/*.so
+usr/lib/*/*.a
 usr/include/*
-usr/lib/skalibs/* usr/lib/*/skalibs/*
+usr/lib/*/skalibs/*

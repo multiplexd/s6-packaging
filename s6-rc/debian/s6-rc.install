@@ -1,2 +1,2 @@
 usr/bin/*
-usr/lib/*.so.* usr/lib/*/*.so.* usr/lib/s6-rc/*
+usr/lib/*/*.so.* usr/lib/s6-rc/*

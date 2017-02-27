@@ -1,3 +1,9 @@
+execline (2.2.0.0-2) UNRELEASED; urgency=low
+
+  * Change the install file to fix building on more recent Debian versions
+
+ -- multiplex'd <multiplexd@gmx.com>  Mon, 27 Feb 2017 19:43:15 +0000
+
 execline (2.2.0.0-1) UNRELEASED; urgency=low
 
   * Update to 2.2.0.0.

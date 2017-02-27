@@ -1,3 +1,9 @@
+s6-dns (2.1.0.0-2) UNRELEASED; urgency=low
+
+  * Change the install file to fix building on more recent Debian versions
+
+ -- multiplex'd <multiplexd@gmx.com>  Mon, 27 Feb 2017 19:53:20 +0000
+
 s6-dns (2.1.0.0-1) UNRELEASED; urgency=low
 
   * Initial release
