@@ -1,3 +1,9 @@
+s6 (2.5.0.0-1) UNRELEASED; urgency=low
+
+  * Update 2.5.0.0.
+
+ -- multiplex'd <multiplexd@gmx.com>  Wed, 29 Mar 2017 21:25:59 +0100
+
 s6 (2.4.0.0-3) UNRELEASED; urgency=low
 
   * Change the install file to fix building on more recent Debian versions
