@@ -9,7 +9,7 @@ s6-portable-utils_version := 2.1.0.0
 s6-linux-utils_version := 2.2.0.0
 s6-linux-init_version := 0.2.0.0
 s6-dns_version := 2.2.0.0
-s6-networking_version := 2.2.1.0
+s6-networking_version := 2.3.0.0
 
 skalibs_revision := $(REVISION)
 s6_revision := $(REVISION)
