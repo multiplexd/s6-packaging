@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.4.0.0),quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.5.0.0),quilt
 Standards-Version: 3.9.2
 Homepage: http://skarnet.org/software/s6-portable-utils/
 
@@ -11,7 +11,7 @@ Package: s6-portable-utils
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.4.0.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.5.0.0), ${misc:Depends}, ${shlibs:Depends}
 Description: Tiny portable generic utilities
  s6-portable-utils is a set of tiny general Unix utilities, often performing well-known tasks such as cut and grep, but
  optimized for simplicity and small size. They were designed for embedded systems and other constrained environments,
