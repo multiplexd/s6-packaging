@@ -3,7 +3,7 @@ ARCH := $(shell dpkg --print-architecture)
 
 skalibs_version := 2.5.0.0
 s6_version := 2.4.0.0
-execline_version := 2.2.0.0
+execline_version := 2.3.0.0
 s6-rc_version := 0.1.0.0
 s6-portable-utils_version := 2.1.0.0
 s6-linux-utils_version := 2.2.0.0
@@ -12,12 +12,12 @@ s6-dns_version := 2.1.0.0
 s6-networking_version := 2.2.1.0
 
 skalibs_revision := $(REVISION)
-s6_revision := 3
+s6_revision := $(REVISION)
 execline_revision := $(REVISION)
-s6-rc_revision := 3
-s6-portable-utils_revision := 1
-s6-linux-utils_revision := 1
-s6-linux-init_revision := 1
+s6-rc_revision := $(REVISION)
+s6-portable-utils_revision := $(REVISION)
+s6-linux-utils_revision := $(REVISION)
+s6-linux-init_revision := $(REVISION)
 s6-dns_revision := $(REVISION)
 s6-networking_revision := $(REVISION)
 
