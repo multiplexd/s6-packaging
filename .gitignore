@@ -16,3 +16,11 @@ s6-rc/*
 !s6-rc/debian
 s6-portable-utils/*
 !s6-portable-utils/debian
+s6-linux-init/*
+!s6-linux-init/debian
+s6-linux-utils/*
+!s6-linux-init/debian
+s6-dns/*
+!s6-dns/debian
+s6-networking/*
+!s6-networking/debian
