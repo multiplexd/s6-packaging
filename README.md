@@ -47,4 +47,4 @@ and s6-dns.
 
 I have little experience with the Debian packaging system, so a lot of the work
 I have done here is merely extending the infrastructure implemented by 
-pervious maintainers.
+previous maintainers.
