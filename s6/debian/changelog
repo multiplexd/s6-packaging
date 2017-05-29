@@ -1,3 +1,10 @@
+s6 (2.5.1.0-2) UNRELEASED; urgency=low
+
+  * Explicitly set libexecdir when configuring so that the correct 
+    directory is compiled into executables
+
+ -- multiplex'd <multiplexd@gmx.com>  Mon, 29 May 2017 20:58:06 +0100
+
 s6 (2.5.1.0-1) UNRELEASED; urgency=low
 
   * Update to 2.5.1.0.
