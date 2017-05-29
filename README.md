@@ -20,8 +20,8 @@ repository:
 
 ## Build instructions
 
-The _devscripts_, _quilt_ and _debhelper_ packages are required by the build
-infrastructure to build the packages. 
+The _devscripts_, _quilt_, _debhelper_ and _wget_ packages are required by the
+build infrastructure to build the packages.
 
 In order to build any of the packages, issue "make _package\_name_".
 

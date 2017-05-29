@@ -4,20 +4,18 @@ package=$1
 version=$2
 revision=$3
 
-if [ "$(lsb_release -sc)" == "lucid" ]; then
-    # the openssl in lucid is too old to handle the github certs
-    export PERL_LWP_SSL_VERIFY_HOSTNAME=0
-fi
-
 # pump up the volume; this stuff is pretty IO bound
 ncpu=$(getconf _NPROCESSORS_CONF)
 export DEB_BUILD_OPTIONS=parallel=$((ncpu * 5))
 
 cd $package
 rm -rf .pc
-uscan --verbose --force-download --upstream-version $version
+#uscan --verbose --force-download --upstream-version $version
+wget -O ../${package}-${version}.tar.gz https://skarnet.org/software/${package}/${package}-${version}.tar.gz
+mk-origtargz --package ${package} --version ${version} --compression gzip --directory .. --copyright-file \
+        debian/copyright ../${package}-${version}.tar.gz
 tar xzf ../${package}_${version}.orig.tar.gz --strip-components=1
-debuild --prepend-path=/opt/make/bin -us -uc
+debuild -us -uc
 cd -
 
 for deb in ${package}*_${version}-${revision}_*.deb; do
