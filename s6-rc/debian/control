@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
 Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.5.0.0), execline-dev (>= 2.3.0.0), s6-dev (>= 2.5.0.0), quilt
-Standards-Version: 3.9.2
+Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-rc/
 
 Package: s6-rc
