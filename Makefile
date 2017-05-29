@@ -13,7 +13,7 @@ s6-networking_version := 2.3.0.0
 
 skalibs_revision := $(REVISION)
 s6_revision := $(REVISION)
-execline_revision := 2
+execline_revision := $(REVISION)
 s6-rc_revision := $(REVISION)
 s6-portable-utils_revision := $(REVISION)
 s6-linux-utils_revision := $(REVISION)
