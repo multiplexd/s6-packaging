@@ -1,10 +1,10 @@
 REVISION := 1
 ARCH := $(shell dpkg --print-architecture)
 
-skalibs_version := 2.5.0.0
-s6_version := 2.5.0.0
-execline_version := 2.3.0.0
-s6-rc_version := 0.2.0.0
+skalibs_version := 2.5.1.1
+s6_version := 2.5.1.0
+execline_version := 2.3.0.1
+s6-rc_version := 0.2.0.1
 s6-portable-utils_version := 2.2.0.0
 s6-linux-utils_version := 2.3.0.0
 s6-linux-init_version := 0.3.0.0
