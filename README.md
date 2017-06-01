@@ -18,6 +18,12 @@ repository:
 * s6-dns 2.2.0.0
 * s6-networking 2.3.0.1 (without TLS support)
 
+## Upgrade notes
+
+* execline 2.3.0.1-2: updating to this version from previous versions requires
+  rebuilding other packages which depend on execline such as s6 and s6-rc as
+  the directory containing the execline binaries has changed.
+
 ## Build instructions
 
 The _devscripts_, _quilt_, _debhelper_ and _wget_ packages are required by the
