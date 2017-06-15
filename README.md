@@ -24,6 +24,12 @@ repository:
   rebuilding other packages which depend on execline such as s6 and s6-rc as
   the directory containing the execline binaries has changed.
 
+* s6 2.6.0.0-1: updating to this version requires rebuilding dependent packages
+  due to an ABI change.
+
+(NB: After any upgrade to s6-rc, you _must_ recompile all services databases 
+compiled with the old version.)
+
 ## Build instructions
 
 The _devscripts_, _quilt_, _debhelper_ and _wget_ packages are required by the
