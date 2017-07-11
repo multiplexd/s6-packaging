@@ -1,3 +1,9 @@
+s6-rc (0.2.1.1-1) UNRELEASED; urgency=low
+
+  * Update to 0.2.1.1
+                                                                                                                                                                                                            
+ -- multiplex'd <multiplexd@gmx.com>  Tue, 11 Jul 2017 08:38:02 +0100
+
 s6-rc (0.2.0.1-2) UNRELEASED; urgency=low
 
   * Explicitly set libexecdir when configuring so that the correct
