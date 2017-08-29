@@ -1,4 +1,4 @@
-s6 (2.6.0.1-1) UNRELEASED; urgency=low
+s6 (2.6.1.0-1) UNRELEASED; urgency=low
 
   * Update to 2.6.1.0. Change libexecdir set at compile time to
     a saner option than the previous.
