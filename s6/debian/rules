@@ -9,7 +9,7 @@ override_dh_auto_configure: workaround
 	dh_auto_configure -- \
 		--libdir=$(lib) \
 		--dynlibdir=$(lib) \
-                --libexecdir=$(lib) \
+                --libexecdir=\$${prefix}/lib/s6 \
 		--with-dynlib=$(lib) \
 		--with-sysdeps=$(lib)/skalibs/sysdeps \
 		--enable-shared \
