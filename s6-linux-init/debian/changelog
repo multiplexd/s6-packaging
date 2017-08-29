@@ -1,3 +1,9 @@
+s6-linux-init (0.3.1.1-1) UNRELEASED; urgency=low
+
+  * Update to 0.3.1.1.
+
+ -- multiplex'd <multiplexd@gmx.com>  Tue, 29 Aug 2017 10:11:07 +0100
+
 s6-linux-init (0.3.1.0-1) UNRELEASED; urgency=low
 
   * Update to 0.3.1.0.
