@@ -1,3 +1,10 @@
+s6-rc (0.2.1.2-1) UNRELEASED; urgency=low
+
+  * Update to 0.2.1.2. In addition, change the libexecdir set at compile
+    time to a saner value.
+                                                                                                                                                                                                            
+ -- multiplex'd <multiplexd@gmx.com>  Tue, 29 Aug 2017 08:59:21 +0100
+
 s6-rc (0.2.1.1-1) UNRELEASED; urgency=low
 
   * Update to 0.2.1.1
