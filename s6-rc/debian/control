@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.0.0), execline-dev (>= 2.3.0.2), s6-dev (>= 2.6.1.0), quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.0.1), execline-dev (>= 2.3.0.3), s6-dev (>= 2.6.1.1), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-rc/
 
@@ -11,7 +11,7 @@ Package: s6-rc
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.6.0.0), execline (>= 2.3.0.2), s6 (>= 2.6.1.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.6.0.1), execline (>= 2.3.0.3), s6 (>= 2.6.1.1), ${misc:Depends}, ${shlibs:Depends}
 Description: service manager for skarnet's s6 process supervisor
  s6-rc is a service manager for s6-based systems, i.e. a suite of programs
  that can start and stop services, both long-running daemons and one-time
