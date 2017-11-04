@@ -1,3 +1,9 @@
+s6 (2.6.1.1-1) UNRELEASED; urgency=low
+
+  * Update to 2.6.1.1. 
+
+ -- multiplex'd <multiplexd@gmx.com>  Sat, 4 Nov 2017 14:09:53 +0000
+
 s6 (2.6.1.0-1) UNRELEASED; urgency=low
 
   * Update to 2.6.1.0. Change libexecdir set at compile time to
