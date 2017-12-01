@@ -3,7 +3,7 @@ ARCH := $(shell dpkg --print-architecture)
 
 skalibs_version := 2.6.2.0
 s6_version := 2.6.1.1
-execline_version := 2.3.0.3
+execline_version := 2.3.0.4
 s6-rc_version := 0.3.0.0
 s6-portable-utils_version := 2.2.1.1
 s6-linux-utils_version := 2.4.0.1
