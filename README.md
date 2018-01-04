@@ -8,14 +8,14 @@ software for Debian.
 This is the skarnet software which is currently packaged in this 
 repository:
 
-* skalibs 2.6.2.0
+* skalibs 2.6.3.0
 * execline 2.3.0.4
-* s6 2.6.2.0
-* s6-rc 0.3.0.1
+* s6 2.7.0.0
+* s6-rc 0.4.0.0
 * s6-portable-utils 2.2.1.1
 * s6-linux-utils 2.4.0.1
 * s6-linux-init 0.3.1.1
-* s6-dns 2.2.0.1
+* s6-dns 2.3.0.0
 * s6-networking 2.3.0.2 (without TLS support)
 
 ## Upgrade notes
