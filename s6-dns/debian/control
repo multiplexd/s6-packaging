@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.0.0), quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.3.0), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-dns/
 
@@ -11,7 +11,7 @@ Package: s6-dns
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.6.0.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.6.3.0), ${misc:Depends}, ${shlibs:Depends}
 Description: Good, usable DNS client libraries (synchronous and asynchronous), and command-line DNS client utilities.
  s6-dns is a suite of DNS client programs and libraries for Unix systems, as an alternative to the BIND, djbdns or other
  DNS clients.
