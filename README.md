@@ -8,27 +8,16 @@ software for Debian.
 This is the skarnet software which is currently packaged in this 
 repository:
 
-* skalibs 2.6.3.0
+* skalibs 2.6.4.0
 * execline 2.3.0.4
-* s6 2.7.0.0
+* s6 2.7.1.1
 * s6-rc 0.4.0.0
 * s6-portable-utils 2.2.1.1
 * s6-linux-utils 2.4.0.1
-* s6-linux-init 0.3.1.1
+* s6-linux-init 0.4.0.0
 * s6-dns 2.3.0.0
 * s6-networking 2.3.0.2 (without TLS support)
 
-## Upgrade notes
-
-* execline 2.3.0.1-2: updating to this version from previous versions requires
-  rebuilding other packages which depend on execline such as s6 and s6-rc as
-  the directory containing the execline binaries has changed.
-
-* s6 2.6.0.0-1: updating to this version requires rebuilding dependent packages
-  due to an ABI change.
-
-(NB: After any upgrade to s6-rc, you _must_ recompile all services databases 
-compiled with the old version.)
 
 ## Build instructions
 
