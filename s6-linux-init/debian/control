@@ -1,9 +1,9 @@
 Source: s6-linux-init
 Section: admin
 Priority: optional
-Maintainer: multiplex'd <multiplexd@gmx.com>
-Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.0.0), quilt
+Maintainer: multiplexd <multiplexd@gmx.com>
+Uploaders: multiplexd <multiplexd@gmx.com>
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.4.0), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-linux-init/
 
@@ -11,7 +11,7 @@ Package: s6-linux-init
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.6.0.0), execline (>= 2.3.0.2), s6 (>= 2.6.1.0), s6-portable-utils (>= 2.2.1.1), s6-linux-utils (>= 2.4.0.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.6.4.0), execline (>= 2.3.0.4), s6 (>= 2.7.1.0), s6-portable-utils (>= 2.2.1.1), s6-linux-utils (>= 2.4.0.2), ${misc:Depends}, ${shlibs:Depends}
 Description: A tool to automate the creation of suitable stage 1 init binaries for s6-based Linux systems.
  s6-linux-init is a set of minimalistic tools to create a s6-based init system, including a /sbin/init binary, on a
  Linux kernel. s6-linux-init is meant to automate creation of scripts revolving around the use of other skarnet.org
