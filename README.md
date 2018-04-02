@@ -9,7 +9,7 @@ This is the skarnet software which is currently packaged in this
 repository:
 
 * skalibs 2.6.4.0
-* execline 2.3.0.4
+* execline 2.5.0.0
 * s6 2.7.1.1
 * s6-rc 0.4.0.0
 * s6-portable-utils 2.2.1.1
