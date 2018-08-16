@@ -1,3 +1,9 @@
+s6-rc (0.4.1.0-1) UNRELEASED; urgency=low
+
+  * Update to 0.4.1.0.
+
+ -- multiplexd <multiplexd@gmx.com>  Thu, 16 Aug 2018 12:50:12 +0100
+
 s6-rc (0.4.0.1-2) UNRELEASED; urgency=low
 
   * Rebuild against newer execline.
