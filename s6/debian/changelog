@@ -1,3 +1,9 @@
+s6 (2.7.2.0-1) UNRELEASED; urgency=low
+
+  * Update to 2.7.2.0.
+
+ -- multiplexd <multiplexd@gmx.com>  Thu, 16 Aug 2018 12:47:49 +0100
+
 s6 (2.7.1.1-1) UNRELEASED; urgency=low
 
   * Update to 2.7.1.1.
