@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: multiplex'd <multiplexd@gmx.com>
 Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.6.0.0), execline-dev (>= 2.3.0.2), s6-dev (>= 2.6.1.0), s6-dns-dev (>= 2.2.0.1), quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.7.0.0), execline-dev (>= 2.5.0.1), s6-dev (>= 2.7.2.0), s6-dns-dev (>= 2.3.0.1), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-networking/
 
@@ -11,7 +11,7 @@ Package: s6-networking
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.6.0.0), execline (>= 2.3.0.2), s6 (>= 2.6.1.0), s6-dns (>= 2.2.0.1), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.7.0.0), execline (>= 2.5.0.1), s6 (>= 2.7.2.0), s6-dns (>= 2.3.0.1), ${misc:Depends}, ${shlibs:Depends}
 Description: UCSPI Unix and TCP tools, access control tools, and network time management utilities.
  s6-networking is a suite of small networking utilities for Unix systems. It
  includes command-line client and server management, TCP access control, privilege
