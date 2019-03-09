@@ -1,22 +1,22 @@
 # Unofficial s6 Debian packaging
 
-This repository contains infrastructure to package s6 and other skarnet 
-software for Debian.
+This repository contains infrastructure to package s6 and other
+[skarnet.org](https://skarnet.org) software for Debian.
 
 ## Current packages
 
 This is the skarnet software which is currently packaged in this 
 repository:
 
-* skalibs 2.7.0.0
-* execline 2.5.0.1
-* s6 2.7.2.0
-* s6-rc 0.4.1.0
-* s6-portable-utils 2.2.1.2
-* s6-linux-utils 2.5.0.0
-* s6-linux-init 0.4.0.0
-* s6-dns 2.3.0.1
-* s6-networking 2.3.0.3 (without TLS support)
+* skalibs 2.8.0.1
+* execline 2.5.1.0
+* s6 2.8.0.0
+* s6-rc 0.5.0.0
+* s6-portable-utils 2.2.1.3
+* s6-linux-utils 2.5.0.1
+* s6-linux-init 0.4.0.1
+* s6-dns 2.3.0.2
+* s6-networking 2.3.0.4 (without TLS support)
 
 
 ## Build instructions
@@ -35,17 +35,3 @@ make skalibs
 
 Then install the skalibs and skalibs-dev packages with _dpkg -i_
 
-## Dependencies
-
-All of the skarnet packages depend on skalibs. s6 and s6-rc both require
-execline and s6-rc requires s6. This requires the generated -dev packages to 
-be installed; for example, compiling s6 requires the skalibs, skalibs-dev,
-execline and execline-dev packages. s6-linux-init requires skalibs, execline,
-s6, s6-portable-utils and s6-linux-utils. s6-networking requires s6, execline
-and s6-dns.
-
-## Disclaimer
-
-I have little experience with the Debian packaging system, so a lot of the work
-I have done here is merely extending the infrastructure implemented by 
-previous maintainers.
