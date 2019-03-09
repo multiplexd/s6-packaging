@@ -1,9 +1,9 @@
 Source: s6-dns
 Section: admin
 Priority: optional
-Maintainer: multiplex'd <multiplexd@gmx.com>
-Uploaders: multiplex'd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.7.0.0), quilt
+Maintainer: multiplexd <multiplexd@gmx.com>
+Uploaders: multiplexd <multiplexd@gmx.com>
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.8.0.0), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6-dns/
 
