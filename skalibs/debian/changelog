@@ -1,8 +1,8 @@
-skalibs (2.8.0.0-1) UNRELEASED; urgency=low
+skalibs (2.8.0.1-1) UNRELEASED; urgency=low
 
-  * Update to skalibs 2.8.0.0
+  * Update to skalibs 2.8.0.1
 
- -- multiplexd <multiplexd@gmx.com>  Sat, 09 Mar 2019 10:49:30 +0000
+ -- multiplexd <multiplexd@gmx.com>  Sat, 09 Mar 2019 11:15:37 +0000
 
 skalibs (2.7.0.0-1) UNRELEASED; urgency=low
 
