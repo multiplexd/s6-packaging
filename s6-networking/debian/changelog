@@ -1,3 +1,9 @@
+s6-networking (2.3.0.4-1) UNRELEASED; urgency=low
+
+  * Update to 2.3.0.4.
+
+ -- multiplexd <multiplexd@gmx.com>  Sat, 09 Mar 2019 11:08:13 +0000
+
 s6-networking (2.3.0.3-1) UNRELEASED; urgency=low
 
   * Update to 2.3.0.3.
