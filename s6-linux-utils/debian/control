@@ -11,7 +11,7 @@ Package: s6-linux-utils
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: skalibs (>= 2.7.0.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: skalibs (>= 2.8.0.0), ${misc:Depends}, ${shlibs:Depends}
 Description: Tiny Linux-specific utilities
  s6-linux-utils is a set of minimalistic Linux-specific system utilities.
 
