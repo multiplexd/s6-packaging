@@ -1,3 +1,9 @@
+s6-linux-init (1.0.2.0-1) UNRELEASED; urgency=low
+
+  * Update to 1.0.2.0
+
+ -- multiplexd <multi@in-addr.xyz>  Mon, 10 Jun 2019 20:28:35 +0100
+
 s6-linux-init (0.4.0.1-1) UNRELEASED; urgency=low
 
   * Update to 0.4.0.1
