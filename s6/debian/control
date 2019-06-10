@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: multiplexd <multiplexd@gmx.com>
 Uploaders: multiplexd <multiplexd@gmx.com>
-Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.8.0.0), execline-dev (>= 2.5.1.0), quilt
+Build-Depends: debhelper (>= 7.0.50~), skalibs-dev (>= 2.8.1.0), execline-dev (>= 2.5.1.0), quilt
 Standards-Version: 3.9.8
 Homepage: http://skarnet.org/software/s6/
 

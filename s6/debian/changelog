@@ -1,3 +1,9 @@
+s6 (2.8.0.1-1) UNRELEASED; urgency=low
+
+  * Update to 2.8.0.1.
+
+ -- multiplexd <multi@in-addr.xyz>  Mon, 10 Jun 2019 20:25:11 +0100
+
 s6 (2.8.0.0-1) UNRELEASED; urgency=low
 
   * Update to 2.8.0.0.
