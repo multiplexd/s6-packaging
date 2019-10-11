@@ -3,6 +3,10 @@
 This repository contains infrastructure to package s6 and other
 [skarnet.org](https://skarnet.org) software for Debian.
 
+**WARNING**: This repository's packaging is no longer updated, and has been
+deprecated in favour of the packaging provided in the
+[s6-debs](https://github.com/s6-debs/s6-debs) meta-repository.
+
 ## Current packages
 
 This is the skarnet software which is currently packaged in this 
